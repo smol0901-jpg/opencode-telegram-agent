@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>OpenCode Agent — ассистент в Telegram</title>
+  <meta name="description" content="Агент OpenCode в Telegram: отвечает на вопросы, выполняет задачи, принимает и отправляет файлы, делает скриншоты." />
+  <meta name="theme-color" content="#0b1020" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="glow glow-a"></div>
+  <div class="glow glow-b"></div>
+
+  <header class="wrap nav">
+    <a class="brand" href="#top" aria-label="На главную">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 32 32" fill="none"><path d="M16 3 27 9v14L16 29 5 23V9L16 3Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="m11 13 5 3 5-3M16 16v7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </span>
+      <span>OpenCode<span class="brand-dim">/agent</span></span>
+    </a>
+    <nav class="nav-links" aria-label="Навигация">
+      <a href="#features">Возможности</a>
+      <a href="#how">Как работать</a>
+      <a href="#examples">Примеры</a>
+      <a class="cta-small" href="#start">Начать</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="wrap hero">
+      <div class="hero-copy">
+        <span class="pill"><span class="dot"></span> Работает через webhook · 24/7</span>
+        <h1>Агент, который<br /><em>реально делает</em> задачи<br />в вашем Telegram</h1>
+        <p class="lead">Не просто отвечает на сообщения: читает файлы, распаковывает архивы, запускает команды, собирает документы и отправляет результат обратно в чат.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#start">Как подключить <span aria-hidden="true">→</span></a>
+          <a class="btn btn-ghost" href="#features">Посмотреть возможности</a>
+        </div>
+        <div class="facts" aria-label="Короткие факты">
+          <div><strong>2</strong><span>рабочие группы</span></div>
+          <div><strong>0</strong><span>застрявших задач</span></div>
+          <div><strong>∞</strong><span>форматов файлов</span></div>
+        </div>
+      </div>
+
+      <div class="hero-card" aria-label="Схема работы агента">
+        <div class="card-top">
+          <span class="card-title">Живой контур</span>
+          <span class="live"><span class="dot"></span> online</span>
+        </div>
+        <div class="flow">
+          <div class="flow-node"><span class="ico">💬</span><div><b>Группа Telegram</b><small>вы пишите задачу</small></div></div>
+          <div class="flow-line"><i></i><i></i><i></i></div>
+          <div class="flow-node"><span class="ico">⚡</span><div><b>Webhook → API</b><small>мгновенная доставка</small></div></div>
+          <div class="flow-line"><i></i><i></i><i></i></div>
+          <div class="flow-node accent"><span class="ico">🤖</span><div><b>Агент OpenCode</b><small>выполняет задачу</small></div></div>
+          <div class="flow-line"><i></i><i></i><i></i></div>
+          <div class="flow-node"><span class="ico">📦</span><div><b>Ответ в чат</b><small>текст, фото, файл, PDF</small></div></div>
+        </div>
+        <div class="card-foot"><span>@lidpk_opencode_relay_bot</span><span id="clock">--:--:--</span></div>
+      </div>
+    </section>
+
+    <section class="wrap section" id="features">
+      <div class="section-head">
+        <span class="kicker">Возможности</span>
+        <h2>Что агент умеет в группе</h2>
+        <p>Всё, что нужно для работы с задачами, не выходя из чата.</p>
+      </div>
+      <div class="grid">
+        <article class="feature"><span class="fico">🧠</span><h3>Отвечает на вопросы</h3><p>Считает, объясняет, пишет и редактирует тексты. Ответ приходит в ту же группу, где был вопрос.</p></article>
+        <article class="feature"><span class="fico">📥</span><h3>Принимает файлы</h3><p>Документы и фото из Telegram скачиваются автоматически — агент их читает и разбирается.</p></article>
+        <article class="feature"><span class="fico">🗜️</span><h3>Распаковывает архивы</h3><p>ZIP попадает в папку входящих: агент распакует, посмотрит содержимое и сделает то, что попросили.</p></article>
+        <article class="feature"><span class="fico">📤</span><h3>Отправляет файлы</h3><p>Сайты, PDF, отчёты и изображения возвращаются в чат как вложения, удобные для чтения.</p></article>
+        <article class="feature"><span class="fico">🖥️</span><h3>Видит экран ПК</h3><p>По просьбе делает снимок экрана и присылает картинку прямо в группу.</p></article>
+        <article class="feature"><span class="fico">🛠️</span><h3>Выполняет команды</h3><p>Запускает скрипты, проверяет сервисы, собирает проекты и чинит то, что сломалось.</p></article>
+      </div>
+    </section>
+
+    <section class="wrap section" id="how">
+      <div class="section-head">
+        <span class="kicker">Как работать</span>
+        <h2>Три шага до первой задачи</h2>
+      </div>
+      <ol class="steps">
+        <li><span>01</span><div><h3>Добавьте бота в группу</h3><p>Найдите <code>@lidpk_opencode_relay_bot</code> и пригласите в нужный чат. Бот зарегистрирует группу автоматически.</p></div></li>
+        <li><span>02</span><div><h3>Напишите задачу</h3><p>Обычным сообщением, можно с вложением. Указание можно давать прямо в тексте — агент поймёт.</p></div></li>
+        <li><span>03</span><div><h3>Получите результат</h3><p>Ответ или файл придёт в тот же чат. Если задача долгая — агент всё равно доведёт её до конца.</p></div></li>
+      </ol>
+    </section>
+
+    <section class="wrap section" id="examples">
+      <div class="section-head">
+        <span class="kicker">Примеры</span>
+        <h2>Что можно написать боту</h2>
+        <p>Нажмите на пример — он скопируется.</p>
+      </div>
+      <div class="prompts" id="prompts">
+        <button type="button">«Посчитай 17×23 и ответь только числом»</button>
+        <button type="button">«Распакуй архив и скажи, что внутри»</button>
+        <button type="button">«Сделай PDF о компании и отправь сюда»</button>
+        <button type="button">«Покажи, как ты видишь мой ПК»</button>
+        <button type="button">«Собери сайт по примеру и пришли ZIP»</button>
+        <button type="button">«Проверь, работает ли webhook»</button>
+      </div>
+    </section>
+
+    <section class="wrap cta" id="start">
+      <div>
+        <span class="kicker">Готовы попробовать?</span>
+        <h2>Просто напишите задачу в группу</h2>
+        <p>Бот уже подключён и ждёт сообщения. Никаких дополнительных команд и настроек не нужно.</p>
+      </div>
+      <a class="btn btn-light" href="https://t.me/lidpk_opencode_relay_bot" target="_blank" rel="noopener">Открыть бота <span aria-hidden="true">↗</span></a>
+    </section>
+  </main>
+
+  <footer class="wrap foot">
+    <span>OpenCode Agent · страница проекта</span>
+    <span>Сделано с заботой о задачах, а не о пассивном мониторинге.</span>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
